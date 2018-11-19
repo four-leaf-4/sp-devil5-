@@ -1,0 +1,992 @@
+@charset "utf-8";
+/*common*/
+html,body{
+	font-size:16px;
+	line-height:1.4;
+	font-family:'Noto Serif JP', sans-serif;
+	}
+body{
+	background-color:#fff;
+	height:auto;
+	overflow:auto;
+	box-sizing:border-box;
+	counter-reset:num_headline;
+	}
+div{
+	box-sizing:border-box;
+	}
+img{
+	display: block;
+    width: 100%;
+	box-sizing: border-box;
+	}
+span.sup{
+	font-size: 0.5em;
+    vertical-align: super;
+	}
+/*common end*/
+/*header and footer start*/
+header{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+    padding: 5px 15px;
+	box-sizing: border-box;
+	}
+footer{
+    padding:1.25rem;
+    margin: auto;
+	background-color: #000;
+	}
+header ul,footer ul{
+	list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	align-items:center;
+    max-width:100%;
+    width: 100%;
+    margin: 0 auto;
+	}
+header li[class^="side_"]{}
+header li[class^="side_right"]{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+	}
+header li[class^="side_right"] img[src*=logo_]{
+	max-width:150px;
+	}
+header li[class^="side_right"] img[src*="logo_twiiter.png"]{
+	max-width:50px;
+    width:100%;
+	min-width:32px;
+    height:auto;
+	}
+header ul a,
+footer ul a{
+	display: block;
+	}
+header ul .logo_ecap{
+	max-width:220px;
+	width:100%;	
+	}
+footer ul .logo_capcom{
+	max-width:110px;
+	width:100%;
+	}
+header .logo_ecap_yahoo{
+    max-width: 300px;
+    width: 100%;
+}
+header .logo_ecap_rakuten{
+	max-width:200px;
+	width:100%;
+	}
+footer{
+	color:#fff;
+	}
+footer .copyright{
+	text-align: right;
+	font-size: 0.5rem;
+	}
+/*header and footer end*/
+/*main start*/
+h1{
+	font-size:2rem;
+	}
+h2{
+	font-family: 'Cormorant Garamond','Noto Serif JP',sans-serif;
+    font-size: 3.75rem;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2;
+    width: 100%;
+    margin: auto;
+	position: relative;
+	z-index:1;
+	}
+h2:before {
+	content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/h2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	z-index: -1;
+}
+h3{
+	font-size:1.25rem;
+	}
+h6:before{
+    counter-increment:num_headline;
+    content:"第"counter(num_headline)"章";	
+	}
+ul[class^="list_"]{
+    counter-reset: list_num;
+    max-width: 640px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+	}
+ul[class^="list_"] li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	}
+ul[class^="list_"] li:before{
+    counter-increment: list_num;
+    content:"※"counter(list_num);
+	padding: 0 0.5em 0 0;
+	}
+.frame{
+    border-image-source: url(https://ec.e-capcom.com/sp/devil5/img/frame_anime.gif);
+    border-image-slice: 15%;
+    border-image-width: 15%;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-style: solid;
+    border-width: 5px;
+    max-width: 300px;
+    line-height: 11;
+	}
+div[role="main"]{
+	background: #000;
+	}
+div[class^="area_"]{
+	background-color: #000;
+	}
+#particles-js{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/top_visual.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+	}
+.logo_dmc5{
+    max-width:800px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+	}
+.logo_dmc5 img[src*="logo_DMC5.png"]{
+	max-width: 500px;
+    margin: auto;	
+	}
+.catchcopy{
+	font-size: 2.25rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 15px #000;
+	}
+@media screen and (max-width: 768px){
+	#particles-js{
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/top_visual_sp.png);
+		}
+	.catchcopy{
+		font-size: 3vw;
+		}
+	}
+.termlimited{
+	font-size: 2.25rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding:10% 5%;
+	}
+.termlimited .gorgeous{
+	font-size:1.5rem;
+	}
+.termlimited span,
+.termlimited_1119 span{
+	display:block;
+	}
+.termlimited>span:nth-of-type(1),
+.termlimited>span:nth-of-type(2){
+	font-size:1.5rem;
+	}
+.termlimited>span:nth-of-type(3){
+	font-size:0.875rem;
+	}
+.termlimited_1119{
+	margin: 5% 0 0 0;
+	}
+.termlimited .end{
+    display: block;
+    color: #ff0d29;
+    font-size: 3rem;
+	}
+div[class="area_lineup"] .headline{
+    font-family: 'Cormorant Garamond','Noto Serif JP',sans-serif;
+    text-align: center;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_headline.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 100%;
+    font-size: 3rem;
+    color: #fff;
+    margin: 5% 0 0 0;
+    padding: 2% 0;
+	}
+div[class="area_lineup"] .headline span{
+	display:block;
+	font-family:'Noto Serif JP', sans-serif;
+	font-size:1.25rem;
+	}
+div[class="area_lineup"] .headline span br{
+	display:none;
+	}
+@media screen and (max-width:426px){
+	div[class="area_lineup"] .headline{
+		font-size:1.5rem;
+		}
+	div[class="area_lineup"] .headline span{
+		font-size:1.0rem;
+		}
+	div[class="area_lineup"] .headline span br{
+		display:block;
+		}
+	}
+div[class^="lineup_"]{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;	
+	}
+div[class="lineup_nero"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_nero.png);}
+div[class="lineup_dante"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_dante.png);}
+div[class="lineup_v"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_v.png);}
+.inner_lineup{
+	display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;	
+	}
+@media screen and (max-width: 768px){
+	div[class^="lineup_"] {
+		background-size: contain;
+		background-position: top center;
+		padding: 50% 0 0 0;
+		}
+	div[class="lineup_nero"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_nero_sp.png);}
+	div[class="lineup_dante"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_dante_sp.png);}
+	div[class="lineup_v"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_lineup_v_sp.png);}
+	.inner_lineup{
+		flex-wrap:wrap;
+		justify-content: flex-end;
+		}
+	}
+.left_side{
+    max-width:400px;
+    width: 100%;	
+	}
+.left_side img[src*="pic_lineup_package_jacket.png"]{
+	max-width:300px;
+	width:100%;
+	padding: 0 5%;
+	}
+.left_side .include{
+	color: #fff;
+	padding: 5%;
+	}
+.left_side .name_chara{
+	color:#fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    max-width:400px;
+	width:100%;
+    font-size:1rem;
+    line-height:2.0;
+    padding:0 5%;
+	}
+.lineup_nero .left_side .name_chara{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_chara_name_nero.png);}
+.lineup_dante .left_side .name_chara{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_chara_name_dante.png);}
+.lineup_v .left_side .name_chara{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_chara_name_v.png);}
+div[class^="lineup_"] .right_side{
+	position:relative;
+	}
+@media screen and (max-width: 768px){
+	div[class^="lineup_"] .right_side{
+		padding: 60% 0 10% 0;
+	}
+}
+div[class^="pic_lineup_coat_"]{
+	max-width:680px;
+	width:100%;
+	}
+.right_side .price_btn{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	}
+.price{
+	font-size: 2.25rem;
+    font-weight: 700;
+    color: red;
+    text-align: center;	
+	}
+.price:before{
+	content:"PRICE:";
+	font-size:0.5em;
+	color:#fff;
+	}
+.price:after{
+	content:"円+税";
+	font-size:0.5em;
+	color:#fff;
+	}
+a[href*="mailto:"]{
+	display: block;
+    text-align: center;
+    text-decoration: none;
+    background-image:linear-gradient(0deg,#860404 0%,#c51212 100%);
+    max-width: 400px;
+    width: 100%;
+    margin:2% auto 5%;
+    line-height: 4;
+	color: #fff;
+	font-family:"YuGothic",'メイリオ',Meiryo,sans-serif;
+	}
+.other_lineup{background-color: #222;}
+div[class^="other_lineup_"]{
+	max-width: 450px;
+    width: 100%;
+    border: 1px solid #006274;
+    background: #0e1f24;
+	margin: 5% 2%;
+	}
+.other_lineup .other_headline{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_other_lineup_headline.png);
+    text-align: center;
+    color: #ffffff;
+    line-height: 2;
+	padding: 2% 0;
+	}
+.inner_other{
+	display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+	max-width: 1600px;
+    width: 100%;
+    margin: auto;
+	}
+@media screen and (max-width: 768px){
+	.inner_other{flex-wrap: wrap;}
+	}
+.other_lineup_box{
+    padding: 2%;
+    box-sizing: border-box;
+	}
+a[class^="btn_buy_"]{
+	display: block;
+    max-width: 300px;
+    width: 100%;
+    margin: 2% auto;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 3;
+	}
+.btn_buy_ps4{
+	background-color:#003791;
+	}
+.btn_buy_xbox{
+	background-color:#107c10;
+	}
+.btn_buy_shirt{
+	background-image: linear-gradient(0deg,#860404 0%,#c51212 100%);
+	}
+.other_lineup .include{
+	color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 4% 0;
+	}
+.other_lineup .include dt:nth-of-type(2){
+	margin: 5% 0 0 0;
+	}
+.other_lineup_shirt .note{
+    color: #f7b41d;
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 10% 0 0;
+    padding: 5% 0;
+    border: 1px #f7b41d outset;
+    background-color: rgba(255, 255, 255, 0.1);
+	}
+div[class="area_about_replica"]{
+	background-color:#17181e;
+	background-image:url(https://ec.e-capcom.com/sp/devil5/img/bg_dmc5.png),repeating-linear-gradient(-45deg, #0c0c0c,#0c0c0c 2px, #222 2px,#222 4px);
+	background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+	padding: 5% 0;
+	}
+@media screen and (max-width: 768px){
+	div[class="area_about_replica"]{
+		background-image:url(https://ec.e-capcom.com/sp/devil5/img/bg_dmc5_sp.png),repeating-linear-gradient(-45deg, #0c0c0c,#0c0c0c 2px, #222 2px,#222 4px);
+		background-size:auto;
+		}
+	}
+div[class="area_about_replica"] h2{
+	font-size:2.25rem;
+	}
+div[class="area_about_replica"] h2 span{font-size:0.5em;}
+div[class^="explain_"]{
+    background-image: repeating-linear-gradient(-45deg,rgba(0,0,0,0.9) 0px,rgba(0,0,0,0.9) 2px,rgba(0,0,0,0.6) 2px,rgba(0,0,0,0.6) 4px);
+    max-width: 50em;
+    width: 100%;
+    margin: 5% auto;
+	font-size: 1.25rem;
+    color: #fff;
+    padding: 5%;
+    box-sizing: border-box;
+	}
+div[class^="explain_"] .special_offer{
+    border: 1px solid rgba(247, 180, 29, 0.8);
+    background: rgba(247, 180, 29, 0.1);
+    margin: 4% 0 0 0;
+    padding: 2%;
+	}
+div[class^="explain_"] .special_offer h3{
+	color:#f7b41d;
+	text-align: center;
+	}
+.actor_image{
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_about_replica_coat_front_dante.png);
+	padding:10% 0 0 0;
+	}
+@media screen and (max-width: 768px){
+	.actor_image{
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_about_replica_coat_front_dante_sp.png);
+		background-position: top center;
+		padding: 70% 0 0 0;
+		}
+	}
+.pic_area{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-around;	
+    max-width: 840px;
+    width: 100%;
+    margin: auto;	
+	}
+.pic_area div{
+	max-width:400px;
+	width:100%;
+	margin:2% 0;
+	}
+div[class="explain_attention_replica"]{
+	color:#f7b41d;
+	}
+div[class="explain_attention_replica"] dt{
+	font-size:1.5rem;
+	text-align: center;
+	}
+div[class="explain_attention_replica"] dd{
+	font-size:1.25rem;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	}
+div[class="explain_attention_replica"] dd:before{
+	content:"※";
+	display:block;
+	}
+div[class="area_coat"]{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat.jpg);
+    background-attachment: fixed;
+	}
+div[class^="coat_"]{
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 2%;
+	}
+div[class="coat_nero"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_nero.png);}
+div[class="coat_dante"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_dante.png);}
+div[class="coat_v"]{background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_v.png);}
+@media screen and (max-width: 768px){
+	div[class="area_coat"]{
+		background-repeat:repeat;
+		background-size: contain;
+		background-attachment:scroll;
+		}
+	div[class="coat_nero"]{
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_nero_sp.png);
+		}
+	div[class="coat_dante"]{
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_dante_sp.png);
+		}
+	div[class="coat_v"]{
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_area_coat_v_sp.png);
+		}
+	}
+div[class^="chara_name_"]{
+	font-family:'Cormorant Garamond', serif;
+	color: #FFF;
+    font-size: 6rem;
+    font-weight: 700;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/h2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    max-width: 400px;
+    text-align: center;
+    line-height: 1.5;
+	}
+[data-ruby]:after{
+	content: attr(data-ruby);
+	font-size:0.5em;
+	}
+div[class^="introduce_replica_"]{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+.intro_left_side{
+	position:relative;
+	max-width:600px;
+	width:100%;
+	}
+.intro_right_side{
+	max-width:1000px;
+	width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+	}
+.intro_left_side img[src*="pic_chara_stand_"]{
+    max-width: 800px;
+	width: 100%;
+	}
+div[class^="intro_pic_coat_"]{
+	display: flex;
+	flex-wrap:nowrap;
+    flex-direction:row;
+	justify-content: center;
+	max-width: 1000px;
+    width: 100%;
+	}
+@media screen and (max-width: 768px){
+	div[class^="introduce_replica_"]{
+		flex-wrap: wrap;
+		padding: 50% 0 0 0;
+		}
+	div[class^="intro_pic_coat_"]{
+		flex-wrap: wrap;
+		}
+	}
+div[class^="intro_pic_coat_"] >div{
+	max-width:680px;
+	width:100%;
+	}
+.pic_price_btn{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	max-width: 350px;
+	width:100%;
+	background: rgba(0, 0, 0, 0.6);
+    padding: 5% 5% 0 5%;
+	}
+.pic_price_btn .include{
+	color: #fff;
+    margin: 10% 0;
+	}
+.intro_right_side div[class^="note_"]{
+    text-align: left;
+    text-indent: -1em;
+    padding: 0 0 0 1em;	
+	}
+.note_sleeves{
+	font-size:1.5rem;
+	color: #f7b41d;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+	}
+.note_flow{
+	font-size:1.25rem;
+    color: #fff;
+	}
+div[class^="pic_zoom_area_"]{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    width: 100%;
+    margin: 5% auto;
+	}
+div[class^="pic_zoom_area_"] div[class^="zoom_"]{
+    max-width: 400px;
+    width: 100%;
+    background-image: linear-gradient(90deg,#ff0d29 0%,#12f3f6 100%);
+    padding: 1px;
+	margin: 2%;
+	}
+.size_detail{
+	max-width: 1200px;
+    width: 100%;
+	padding: 4%;
+    margin: auto;
+	background-image: repeating-linear-gradient(-45deg,rgba(0,0,0,0.9) 0px,rgba(0,0,0,0.9) 2px,rgba(0,0,0,0.6) 2px,rgba(0,0,0,0.6) 4px);
+	}
+.size_headline{
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+	}
+.size_headline .size{
+	font-size: 2.25rem;
+    font-weight: 700;
+    font-family: 'Cormorant Garamond',sans-serif;
+	}
+.size_headline .size:after{
+    content: "サイズ詳細";
+    display: block;
+    font-size: 0.5em;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-weight: 400;
+	}
+.size_headline .note_freesize{
+	font-size: 0.75rem;
+	border: 4px double #fff;
+    line-height: 2;
+    padding: 0 5%;
+    margin: 5% 0;
+	}
+.size_pic_area{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;	
+	}
+.size_pic_area .illust{
+	max-width: 500px;
+    width: 100%;	
+	}
+div[class^="man_in_"]{
+	color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5% 0 0 0;
+	}
+div[class^="pic_man_in"]{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items: flex-end;	
+	}
+div[class^="pic_man_in"] div{
+	max-width: 180px;
+	width: 100%;
+	}
+.model_size{
+	text-align: right;
+	}
+.model_size:before{
+	content:"Model：";
+	}
+.model_size:after{
+	content:"cm";
+	}
+img[src*="border-bottom.png"]{
+    width: 100%;
+    padding: 10% 0;	
+	}
+div[class="area_shirt"] {
+    background-color: #17181e;
+    background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_shirt.png),url(https://ec.e-capcom.com/sp/devil5/img/bg_workshirt_gradient.png),repeating-linear-gradient(-45deg, #0c0c0c,#0c0c0c 2px, #222 2px,#222 4px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center,center;
+    padding: 5% 0;
+}
+div[class="explain_shirt"]{
+	margin: 25% auto 10%;
+	}
+@media screen and (max-width: 768px){
+	div[class="area_shirt"] {
+		background-image: url(https://ec.e-capcom.com/sp/devil5/img/bg_shirt_sp.png),url(https://ec.e-capcom.com/sp/devil5/img/bg_workshirt_gradient_sp.png),repeating-linear-gradient(-45deg, #0c0c0c,#0c0c0c 2px, #222 2px,#222 4px);
+		background-size:auto,100%;
+		}
+	div[class="explain_shirt"]{
+		margin:65% auto 10%;
+	}
+}
+div[class="explain_shirt"] h3,
+div[class^="explain_gift_"] h3{
+	text-align:center;
+    font-size: 2.25rem;
+    padding: 0 0 5% 0;
+	}
+div[class^="pic_shirt_zoom_"]{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: auto;
+	}
+@media screen and (max-width: 768px){
+	div[class^="pic_shirt_zoom_"]{
+		flex-wrap:wrap;
+		}	
+	}
+div[class="pic_shirt_zoom_in"] div{
+	max-width: 400px;
+    width: 100%;
+    border-image-source: url(https://ec.e-capcom.com/sp/devil5/img/frame_anime.gif);
+    border-image-slice: 15%;
+    border-image-width: 15%;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-style: solid;
+    border-width: 5px;
+    line-height: 11;
+    padding: 1px;
+    margin: 2%;
+	}
+.limited_edition_details{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+	}
+.limited_edition_details .right_side{
+	max-width:400px;
+	width:100%;
+	margin:2% 4%;
+	}
+.limited_edition_details .include{
+	color:#fff;
+	text-align:center;
+	}
+div[class="area_gift"] {
+    background-color: #17181e;
+    background-image:repeating-linear-gradient(-45deg, rgba(0,0,0,0.0) 0px,rgba(0,0,0,0.0) 2px,rgba(0,0,0,0.6) 2px,rgba(0,0,0,0.6) 4px),url(https://ec.e-capcom.com/sp/devil5/img/bg_nico_order.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center,top center;
+    padding: 5% 0;
+	border-top: 5px double #fff;
+	}
+div[class="explain_gift_jacket"] {
+    margin: 35% auto 10%;
+}
+@media screen and (max-width: 768px){
+	div[class="area_gift"]{
+		background-image:repeating-linear-gradient(-45deg, rgba(0,0,0,0.9) 0px,rgba(0,0,0,0.9) 2px,rgba(0,0,0,0.6) 2px,rgba(0,0,0,0.6) 4px),url(https://ec.e-capcom.com/sp/devil5/img/bg_nico_order_sp.png);
+		background-size: auto;
+		}
+	div[class="explain_gift_jacket"] {
+		margin:65% auto 10%;
+	}
+}
+div[class="explain_gift_jacket"] .attention_gift_jacket{
+	margin: 5%;
+    font-size: 0.75rem;
+	}
+.pic_jacket{
+	max-width: 1200px;
+    width: 100%;
+    display: flex;
+	flex-wrap:nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+	}
+@media screen and (max-width: 768px){
+	.pic_jacket{
+		flex-wrap:wrap;
+	}
+}
+.pic_jacket figure{
+    padding: 0 0 15% 0;
+	}
+.pic_jacket figcaption{
+	color:#fff;
+	text-align:center;
+	}
+.pic_jacket figcaption:before{
+	content: "illustrated by:";
+    font-size: 0.5em;
+    padding: 0 2% 0 0;
+	}
+.pic_jacket figcaption:after{}
+.attention_gift_dlc{
+	padding: 5%;
+	}
+.attention_gift_dlc dt{
+	text-align:center;
+	}
+.attention_gift_dlc dd{
+    list-style: none;
+    font-size: 0.875rem;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	}
+.attention_gift_dlc dd:before{
+	content:"※";
+	display:block;
+	}
+.pic_dlc{
+	max-width: 900px;
+    width: 100%;
+    margin: auto;
+	}
+.pic_dlc figcaption{
+	color: #fff;
+    text-align: center;
+	}
+.spec_area{
+    background-color:#222;
+    color: #fff;
+	border-top:1px solid;
+	padding: 10% 5% 2%;
+	}
+a[href="http://www.capcom.co.jp/devil5/"]{
+	display: block;
+    max-width: 1000px;
+    margin: auto;
+	}
+a[href="http://www.capcom.co.jp/devil5/"] img{
+	transition:all 1.0s;
+	}
+a[href="http://www.capcom.co.jp/devil5/"]:hover img{
+	transform:scale(1.08);
+	}
+.banner_dmc5{
+	box-shadow: 0 0 1px 1px #12f3f6;
+    box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	}
+.banner_dmc5:before{
+	content:"";
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+    box-shadow:inset 0 0 20px 3px #ff0d29;
+	animation:anime_bnr infinite alternate 2s;
+	z-index: 1;
+	}
+@keyframes anime_bnr{
+	0%{box-shadow:inset 0 0 5px 3px #ff0d29;}
+	50%{box-shadow:inset 0 0 40px 8px #ff0d29;}
+	100%{box-shadow:inset 0 0 5px 3px #ff0d29;}
+	}
+img[src*="bnr_dmc5_official_sp"]{
+	display:none;
+}
+@media screen and (max-width: 768px){
+	img[src*="bnr_dmc5_official_sp"]{
+	display:block;
+	}
+	}
+@media screen and (max-width: 768px){
+	img[src*="bnr_dmc5_official_pc"]{
+	display:none;
+	}
+}
+table.spec{
+	width:auto;
+    table-layout: fixed;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    line-height: 2;
+	margin: 5% 0;
+	}
+table.spec tr{border-top: 1px solid #666;}
+table.spec th{
+	width:7em;
+	}
+table.spec td{
+	display:flex;
+	max-width:20em;
+	width:100%;
+    flex-direction: row;
+    flex-wrap:wrap;
+	}
+table.spec td:before{
+	content:"：";
+	display:block;
+	}
+table.spec img[src*="logo_cero"]{
+    height: 5em;
+    width: auto;
+    padding: 5% 0 0 5%;
+	}
+.spec_area .notice_hardware_maker{
+	text-align: center;
+    color: #5e5f5f;
+    font-size: 0.6rem;
+    line-height: 1.6;
+	}
+.spec_area .notice_hardware_maker [class^="logo_"]{
+    height:1em;
+	display: inline;
+    width: auto;
+	}
+img[src*="pic"]{
+	opacity: 0;
+    transition: all 1.0s;
+    transition-delay: 0.4s;
+    transform: translateY(10rem);	
+}
+img[src*="pic"].scrollin{
+    opacity: 1;
+    transform: translateY(0rem);
+}
+/*main end*/
